@@ -64,17 +64,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DataBase.mdf" />
+    <Content Include="App_Data\DataBase_log.ldf">
+      <DependentUpon>DataBase.mdf</DependentUpon>
+    </Content>
     <Content Include="Employee SignIn.aspx" />
     <Content Include="employee.aspx" />
+    <Content Include="EmployeeHomePage.aspx" />
     <Content Include="Footer.html" />
     <Content Include="Home Page.html" />
-    <Content Include="Images\logo.png" />
+    <Content Include="Images.html" />
+    <Content Include="Images\image1.jpg" />
+    <Content Include="Images\image2.jpg" />
+    <Content Include="Images\image3.jpg" />
+    <Content Include="Images\image4.jpg" />
+    <Content Include="Images\university logo.jpg" />
     <Content Include="Index.html" />
     <Content Include="Links.aspx" />
     <Content Include="Logo.html" />
     <Content Include="Student SignIn.aspx" />
     <Content Include="Student SignUp.aspx" />
     <Content Include="Student.aspx" />
+    <Content Include="StudentsList.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +102,20 @@
     </Compile>
     <Compile Include="employee.aspx.designer.cs">
       <DependentUpon>employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeHomePage.aspx.cs">
+      <DependentUpon>EmployeeHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeHomePage.aspx.designer.cs">
+      <DependentUpon>EmployeeHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeHomePage.Master.cs">
+      <DependentUpon>EmployeeHomePage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeHomePage.Master.designer.cs">
+      <DependentUpon>EmployeeHomePage.Master</DependentUpon>
     </Compile>
     <Compile Include="Links.aspx.cs">
       <DependentUpon>Links.aspx</DependentUpon>
@@ -121,14 +146,25 @@
     <Compile Include="Student.aspx.designer.cs">
       <DependentUpon>Student.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StudentsList.aspx.cs">
+      <DependentUpon>StudentsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsList.aspx.designer.cs">
+      <DependentUpon>StudentsList.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EmployeeHomePage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PersonalPhoto\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

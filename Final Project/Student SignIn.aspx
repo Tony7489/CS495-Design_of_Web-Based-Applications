@@ -9,9 +9,9 @@
     protected void btnLogin_Click(object sender, EventArgs e)
     {
         SqlConnection conn = new SqlConnection();
-        conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|fue.mdf;Integrated Security=True";
+        conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|DataBase.mdf;Integrated Security=True";
 
-        string strSelect = "SELECT * FROM Student "
+        string strSelect = "SELECT * FROM Student"
             + " WHERE StudentId = '" + txtStudentId.Text + "' AND Password = '" + txtPassword.Text + "'";
 
         SqlCommand cmdSelect = new SqlCommand(strSelect, conn);
@@ -40,7 +40,7 @@
         .style1
         {
             width: 100%;
-            background-color: #00FFFF;
+            background-color: lightgray;
         }
         .style2
         {
